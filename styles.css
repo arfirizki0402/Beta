@@ -1,0 +1,45 @@
+@font-face {
+    font-family: '8bit';
+    src: url('https://fonts.cdnfonts.com/s/17171/PressStart2P-Regular.woff') format('woff');
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-family: '8bit', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+#startButton {
+    background-color: #ffcc00;
+    border: none;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-family: '8bit', sans-serif;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+}
+
+#startButton.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#startButton:active {
+    background-color: #ffaa00;
+    transform: scale(0.9);
+}
+
+.hidden {
+    display: none;
+}
